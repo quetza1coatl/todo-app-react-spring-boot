@@ -12,7 +12,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@RestController(TodoItemController.REST_URL)
+@RestController
+@RequestMapping(TodoItemController.REST_URL)
 public class TodoItemController {
     static final String REST_URL = "/rest/items";
     private final TodoItemRepository repository;
@@ -30,7 +31,7 @@ public class TodoItemController {
         return ResponseEntity.created(uriOfNewResource).body(created);
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping (produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<TodoItem>> getItems(){
         return ResponseEntity.ok(
                 this.repository.findAll()

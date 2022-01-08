@@ -3,18 +3,17 @@ package com.quetzalcoatl.todoappreactspringboot.model;
 import com.quetzalcoatl.todoappreactspringboot.util.TodoPriority;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TodoItem {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class TodoItem extends AbstractBaseEntity{
 
     private String label;
 
