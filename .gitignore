@@ -10,3 +10,8 @@ db
 *.iml
 *.ipr
 
+# dependencies
+/node_modules
+
+bundle.js
+bundle.js.map
