@@ -29,14 +29,18 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg|jpg|gif|eot|otf|ttf|woff|woff2)$/,
+                test: /\.(png|jpg|jpeg|ico)$/,
                 use: [
                     {
-                        loader: 'url-loader',
-                        options: {}
+                        loader: "file-loader",
+                        options: {
+                            outputPath: 'images',
+                            name: '[name]-[sha1:hash:7].[ext]'
+                        }
                     }
                 ]
             }
+
         ]
     }
 };

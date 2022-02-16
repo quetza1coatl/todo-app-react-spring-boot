@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+.header {
+    background-color: #26272b;
+    padding: 10px 0 10px;
+    font-size: 15px;
+    color: #737373;
+}
+
+.header .txt{
+    color: #b63939;
+}
+
