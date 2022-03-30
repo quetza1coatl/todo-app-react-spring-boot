@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "../../../frontend/components/header";
+import TodoList from "../../../frontend/components/todo-list";
 
 
 export class App extends Component {
@@ -8,6 +9,7 @@ export class App extends Component {
         return (
             <div>
                 <Header />
+                <TodoList />
             </div>
     );
     }
