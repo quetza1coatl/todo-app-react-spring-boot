@@ -24,6 +24,10 @@
 }
 
 /* Todo List*/
+.todo-list {
+    height:500px;
+    overflow-y: scroll;
+}
 
 .todo-list .list-group-item{
     background-color: #26272b;
@@ -37,7 +41,6 @@
 
 .todo-item-label {
     margin-left: 1.25rem;
-    padding-right: 5rem;
     line-height: 35px;
     color: #19FAE7;
     cursor: pointer;

@@ -5,10 +5,13 @@ const TodoList = () => {
     return (
         <ul className="list-group todo-list">
             <li className="list-group-item">
-                <TodoItem/>
+                <TodoItem />
             </li>
             <li className="list-group-item">
-                <TodoItem/>
+                <TodoItem />
+            </li>
+            <li className="list-group-item">
+                <TodoItem />
             </li>
         </ul>
     );
