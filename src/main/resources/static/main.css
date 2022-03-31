@@ -25,7 +25,7 @@
 
 /* Todo List*/
 .todo-list {
-    height:500px;
+    height:60vh;
     overflow-y: scroll;
 }
 
@@ -50,4 +50,22 @@
 .todo-item button {
     width: 40px;
     margin: 3px;
+}
+/*Description Block*/
+
+.description{
+    padding: 0.75rem;
+    border-top:1px solid rgb(16, 156, 144);
+    height:15vh;
+    overflow-y: scroll;
+}
+.description-text {
+    font-family: 'Redressed', cursive;
+    font-size: 1.75rem;
+    color: #19FAE7;
+}
+
+.description-content {
+    font-size: 1.25rem;
+    color: grey;
 }

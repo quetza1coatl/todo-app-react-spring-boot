@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Description from "../../../frontend/components/description";
 import Header from "../../../frontend/components/header";
 import TodoList from "../../../frontend/components/todo-list";
 
@@ -10,6 +11,7 @@ export class App extends Component {
             <div>
                 <Header />
                 <TodoList />
+                <Description />
             </div>
     );
     }
