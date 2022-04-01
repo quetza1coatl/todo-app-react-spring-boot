@@ -3,20 +3,29 @@ import ReactDOM from "react-dom";
 import Description from "../../../frontend/components/description";
 import Header from "../../../frontend/components/header";
 import TodoList from "../../../frontend/components/todo-list";
+import axios from "axios";
 
 
-export class App extends Component {
+export default class App extends Component {
+    state = {
+        todoItems: []
+    };
+
+    componentDidMount() {
+        axios.get('/rest/items')
+            .then(response => this.setState({ todoItems: response.data }));
+    };
+
     render() {
         return (
             <div>
                 <Header />
-                <TodoList />
+                <TodoList
+                    data={this.state.todoItems} />
                 <Description />
             </div>
-    );
+        );
     }
 }
-
-export default App;
 
 ReactDOM.render(<App />, document.querySelector("#app"));

@@ -1,10 +1,15 @@
 import React from "react";
 
-const TodoItem = () => {
+const TodoItem = ({ label }) => {
+    console.log(label);
     return (
         <span className="todo-item">
             <button type="button"
                 className="btn btn-outline-success btn-sm">
+            </button>
+
+            <button type="button"
+                className="btn btn-outline-primary btn-sm">
             </button>
 
             <button type="button"
@@ -13,7 +18,7 @@ const TodoItem = () => {
 
             <span
                 className="todo-item-label">
-                Hardcoded item
+                {label}
             </span>
         </span>
     );
