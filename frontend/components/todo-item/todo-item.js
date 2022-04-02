@@ -1,7 +1,6 @@
 import React from "react";
 
-const TodoItem = ({ label }) => {
-    console.log(label);
+const TodoItem = ({ label, onMouseOverLabel, onMouseOutLabel }) => {
     return (
         <span className="todo-item">
             <button type="button"
@@ -17,6 +16,8 @@ const TodoItem = ({ label }) => {
             </button>
 
             <span
+                onMouseOver={ onMouseOverLabel }
+                onMouseOut={ onMouseOutLabel }
                 className="todo-item-label">
                 {label}
             </span>

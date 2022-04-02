@@ -8,7 +8,8 @@ import axios from "axios";
 
 export default class App extends Component {
     state = {
-        todoItems: []
+        todoItems: [],
+        selectedItemId: null
     };
 
     componentDidMount() {
@@ -16,13 +17,27 @@ export default class App extends Component {
             .then(response => this.setState({ todoItems: response.data }));
     };
 
+    onMouseOverLabel = (id) => {
+        this.setState({ selectedItemId: id });
+    };
+
+    onMouseOutLabel = () => {
+        this.setState({ selectedItemId: null });
+     };
+
     render() {
+        const { todoItems, selectedItemId } = this.state;
         return (
             <div>
                 <Header />
                 <TodoList
-                    data={this.state.todoItems} />
-                <Description />
+                    data={todoItems}
+                    onMouseOverLabel={this.onMouseOverLabel}
+                    onMouseOutLabel={this.onMouseOutLabel}
+                />
+                <Description
+                    todoItems={todoItems}
+                    selectedItemId={selectedItemId} />
             </div>
         );
     }
